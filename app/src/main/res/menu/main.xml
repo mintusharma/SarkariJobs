@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Home"
+        android:id="@+id/action_home"/>
+
+    <item android:title="Refresh"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_refresh_black_24dp"
+        android:id="@+id/action_refresh"/>
+
+    <item android:title="Share"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:id="@+id/action_share"/>
+
+    <item android:title="About"
+        android:id="@+id/action_about"/>
+
+    <item
+        android:id="@+id/action_more"
+        android:title="More Apps" />
+</menu>

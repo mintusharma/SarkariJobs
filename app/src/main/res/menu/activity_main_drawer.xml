@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_aptitude"
+            android:icon="@drawable/q"
+            android:title="@string/menu_aptitude" />
+        <item
+            android:id="@+id/nav_gk"
+            android:icon="@drawable/gk"
+            android:title="@string/menu_gk" />
+        <item
+            android:id="@+id/nav_reasoning"
+            android:icon="@drawable/gk"
+            android:title="@string/menu_reasoning" />
+        <item
+            android:id="@+id/nav_result"
+            android:icon="@drawable/result"
+            android:title="@string/result" />
+
+        <item
+            android:id="@+id/nav_quiz"
+            android:icon="@drawable/q"
+            android:title="@string/menu_quiz" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/about"
+                android:title="@string/menu_about" />
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_more"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/action_more" />
+        </menu>
+    </item>
+
+</menu>
