@@ -1,44 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/coordinatorLayout"
+    android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".Splash">
-
+    tools:context=".activities.SplashActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:src="@drawable/logo"
         android:id="@+id/splash"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:padding="15dp"
-        android:layout_height="400dp" />
-
-    <Button
         android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:textSize="20sp"
-        android:layout_margin="10dp"
-        android:text="Try Again"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/smoke"
-        android:padding="10dp"
-        android:visibility="gone"
-        android:id="@+id/tryagain"
-        android:layout_height="wrap_content" />
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/app_name"
+        android:padding="15dp"
+        android:src="@drawable/main_app_logo" />
+
+
+    <LinearLayout
+        android:id="@+id/love_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Made with"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/love"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_love_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="in India"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_nav_app_version"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/splash"
-        android:layout_marginTop="25dp"
-        android:layout_centerInParent="true"
-        android:text="Sarkari Jobs 4 U"
-        android:textColor="#1a237e"
-        android:textSize="35sp"
-        android:textStyle="bold" />
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text="@string/version"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/colorPrimaryDark" />
 
-</RelativeLayout>
+    <!-- <TextView
+         android:id="@+id/trybtn"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:layout_marginStart="20dp"
+         android:layout_marginEnd="20dp"
+         android:layout_gravity="bottom"
+         android:layout_marginBottom="60dp"
+         android:background="@drawable/rounded_background"
+         android:clickable="true"
+         android:focusable="true"
+         android:gravity="center"
+         android:text="@string/try_Again"
+         android:textAlignment="center"
+         android:textAllCaps="true"
+         android:textColor="@color/colorWhite"
+         android:textSize="20sp"
+         android:textStyle="bold"
+         android:visibility="gone" />-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

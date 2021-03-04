@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.geekdroid.sarkarijobs">
+    package="com.geekdroid.sarkarinaukri">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -11,41 +11,25 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_2"
-        android:supportsRtl="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".About" android:parentActivityName=".MainActivity" />
+        tools:ignore="AllowBackup">
+        <activity android:name="com.geekdroid.sarkarinaukri.activities.SyllabusActivity"/>
+        <activity android:name="com.geekdroid.sarkarinaukri.activities.AboutActivity" />
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Admissions" android:parentActivityName=".MainActivity"/>
-
-        <activity android:name=".MoreDetails" />
+            android:name="com.geekdroid.sarkarinaukri.activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.geekdroid.sarkarinaukri.activities.MoreDetailsActivity" />
+        <activity android:name="com.geekdroid.sarkarinaukri.activities.ResultActivity" />
+        <activity android:name="com.geekdroid.sarkarinaukri.activities.AnswerKeyActivity" />
+        <activity android:name="com.geekdroid.sarkarinaukri.activities.AdmitCardActivity" />
         <activity
-            android:name=".Result"
-            android:parentActivityName=".MainActivity" />
+            android:name="com.geekdroid.sarkarinaukri.activities.DisplayDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.geekdroid.sarkarinaukri.activities.LatestActivity" />
         <activity
-            android:name=".Syllabus"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Quiz"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".AnswerKey"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".AdmitCard"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Display"
-            android:parentActivityName=".MainActivity" android:theme="@style/AppTheme.NoActionBar"/>
-        <activity
-            android:name=".Latest"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Splash"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name="com.geekdroid.sarkarinaukri.activities.SplashActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -55,9 +39,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-8692315641498587~6802184712"
-            />
-
+            android:value="ca-app-pub-8692315641498587~6802184712" />
     </application>
 
 </manifest>

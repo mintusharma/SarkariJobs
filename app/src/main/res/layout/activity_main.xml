@@ -1,29 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:context=".activities.MainActivity">
 
 
-    <include
-        layout="@layout/app_bar_main"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_layout"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_above="@id/bottom_navigation_view_linear"
+        tools:layout_editor_absoluteX="0dp" />
 
+    <com.geekdroid.bottom_navigation.BubbleBottomNavigationLinearView
+        android:id="@+id/bottom_navigation_view_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="8dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
-</androidx.drawerlayout.widget.DrawerLayout>
+        <com.geekdroid.bottom_navigation.BubbleBottomToggleView
+            android:id="@+id/l_item_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/colorPrimaryDark"
+            app:bt_colorInactive="@color/white"
+            app:bt_icon="@drawable/ic_home"
+            android:layout_weight="1"
+            app:bt_active="true"
+            app:bt_shape="@drawable/transition_background_drawable_list"
+            app:bt_title="@string/home" />
+
+        <com.geekdroid.bottom_navigation.BubbleBottomToggleView
+            android:id="@+id/l_item_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/colorPrimaryDark"
+            app:bt_colorInactive="@color/white"
+            app:bt_icon="@drawable/ic_job"
+            android:layout_weight="1"
+            app:bt_shape="@drawable/transition_background_drawable_list"
+            app:bt_title="@string/latest" />
+
+        <com.geekdroid.bottom_navigation.BubbleBottomToggleView
+            android:id="@+id/l_item_profile_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/colorPrimaryDark"
+            app:bt_colorInactive="@color/white"
+            app:bt_icon="@drawable/ic_pass"
+            android:layout_weight="1"
+            app:bt_shape="@drawable/transition_background_drawable_list"
+            app:bt_title="@string/admit_card" />
+
+        <com.geekdroid.bottom_navigation.BubbleBottomToggleView
+            android:id="@+id/l_item_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/colorPrimaryDark"
+            app:bt_colorInactive="@color/white"
+            app:bt_icon="@drawable/ic_info"
+            android:layout_weight="1"
+            app:bt_shape="@drawable/transition_background_drawable_list"
+            app:bt_title="@string/about" />
+
+    </com.geekdroid.bottom_navigation.BubbleBottomNavigationLinearView>
+</RelativeLayout>

@@ -1,133 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".About">
+    android:orientation="vertical"
+    tools:context=".activities.AboutActivity">
 
-    <RelativeLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_margin="5dp"
-        android:padding="5dp"
-        android:id="@+id/about_logo"
-        android:layout_height="160dp">
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:src="@drawable/logo"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-            android:layout_margin="5dp"
-            android:id="@+id/logo"
-            android:layout_height="100dp" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_below="@+id/logo"
-            android:layout_centerInParent="true"
-            android:text="Sarkari Jobs 4U v1.1"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_height="wrap_content" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-    </RelativeLayout>
-
-    <ScrollView
+  <!--  <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_below="@id/about_logo"
-        android:id="@+id/sv"
-        android:layout_marginBottom="10dp"
-        android:layout_height="250dp">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:id="@+id/about_details"
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
         android:layout_height="match_parent">
 
-        <TextView
+        <RelativeLayout
+            android:id="@+id/about_logo"
             android:layout_width="match_parent"
-            android:text="Developed by"
-            android:textSize="15sp"
-            android:padding="5dp"
-            android:textColor="#9e9e9e"
-            android:id="@+id/developedBy"
-            android:layout_height="wrap_content" />
+            android:layout_height="160dp"
+            android:layout_margin="5dp"
+            android:padding="5dp">
 
-        <TextView
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/main_logo" />
+
+            <TextView
+                android:id="@+id/txt_nav_app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:layout_centerInParent="true"
+                android:text="@string/version"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/sv"
             android:layout_width="match_parent"
-            android:layout_below="@+id/developedBy"
-            android:text="@string/details"
-            android:id="@+id/implementation"
-            android:textSize="15sp"
-            android:padding="5dp"
-            android:textColor="#9e9e9e"
-            android:layout_height="wrap_content" />
-        <TextView
+            android:layout_height="250dp"
+            android:layout_below="@id/about_logo"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:id="@+id/about_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/implementation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/details"
+                    android:textColor="#9e9e9e"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tech_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/implementation"
+                    android:padding="5dp"
+                    android:text="@string/datafrom"
+                    android:textColor="#9e9e9e"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/latest_interview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/webAdview"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/gmail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleprimary"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/ic_mail_outline_black_24dp" />
+
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleprimarydark"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/ic_icons8_twitter" />
+
+            <ImageView
+                android:id="@+id/instagram"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleprimary"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/ic_icons8_instagram" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/webAdview"
             android:layout_width="match_parent"
-            android:layout_below="@+id/implementation"
-            android:text="@string/datafrom"
-            android:textSize="15sp"
-            android:id="@+id/tech_details"
-            android:textColor="#9e9e9e"
-            android:padding="5dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </RelativeLayout>-->
 
-    </RelativeLayout>
-    </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/latest_interview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_above="@id/adView"
-        android:layout_centerInParent="true"
-        android:orientation="horizontal"
-        android:padding="5dp">
-
-        <ImageView
-            android:id="@+id/gmail"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="5dp"
-            android:background="@drawable/circlebackgroundgreen"
-            android:padding="10dp"
-            android:src="@drawable/ic_mail_outline_black_24dp" />
-
-        <ImageView
-            android:id="@+id/twitter"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="5dp"
-            android:background="@drawable/circleblue"
-            android:padding="10dp"
-            android:src="@drawable/ic_icons8_twitter" />
-
-        <ImageView
-            android:id="@+id/instagram"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="5dp"
-            android:background="@drawable/circleorange"
-            android:padding="10dp"
-            android:src="@drawable/ic_icons8_instagram" />
-
-
-    </LinearLayout>
-
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_alignParentBottom="true"
-        android:layout_height="wrap_content"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-8692315641498587/1490148289"/>
-
-</RelativeLayout>
+</LinearLayout>

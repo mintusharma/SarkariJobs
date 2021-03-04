@@ -3,39 +3,95 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:id="@+id/linearLayout"
-    android:background="@color/smoke"
-    android:layout_height="wrap_content">
+    android:background="@drawable/ic_blank_card"
+    android:layout_margin="5dp"
+    android:layout_height="80dp">
 
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            app:cardCornerRadius="10dp"
             android:id="@+id/mks"
-            android:background="#fff"
+            app:cardCornerRadius="0dp"
+            android:layout_marginStart="6dp"
             app:cardMaxElevation="10dp"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="vertical"
                 android:id="@+id/jobList"
-                android:padding="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:background="?android:selectableItemBackground"
+                android:padding="5dp"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:textStyle="bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:textSize="20sp"
-                    android:layout_marginEnd="10dp"
-                    android:id="@+id/jobName"
-                    android:text="Exams Syllabussss"
-                    />
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:id="@+id/imageView"
+                       android:layout_margin="5dp"
+                       android:contentDescription="@string/home"/>
+
+                   <TextView
+                       android:textStyle="bold"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:gravity="center_vertical"
+                       android:textSize="15sp"
+                       android:id="@+id/jobName"
+                       android:hint="@string/app_name"
+                       />
 
 
-            </RelativeLayout>
+               </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/date_layout"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_date_range_24"
+                        android:layout_margin="5dp"
+                        android:visibility="invisible"
+                        android:id="@+id/dateImage"
+                        android:contentDescription="@string/home"/>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:alpha="0.5"
+                        android:visibility="invisible"
+                        android:textColor="@color/colorAccent"
+                        android:id="@+id/lastDate" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:alpha="0.7"
+                        android:textColor="@color/red_active"
+                        android:id="@+id/applyNow" />
+
+                </LinearLayout>
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 

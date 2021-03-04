@@ -1,43 +1,69 @@
 <resources>
-    <string name="app_name">SarkariJobs</string>
+    <string name="app_name">Sarkari Naukri</string>
 
     <string name="links">https://www.sarkariresult.com</string>
-    <string name="latest">All Latest Jobs</string>
-    <string name="result">All Results</string>
-    <string name="admit_card">All Admit Cards</string>
-    <string name="syllabus">All Exams Syllabus</string>
+    <string name="latest">Latest</string>
+    <string name="result">Results</string>
+    <string name="all_admit_card">All Admit Cards</string>
+    <string name="syllabus">Syllabus</string>
     <string name="answer_key">Exams Answers Keys</string>
     <string name="bank">All Bank Exams </string>
     <string name="railway">All Railway Exams</string>
 
+    <string name="url">https://raw.githubusercontent.com/mintusharma/</string>
+
+    <string name="app_id">ca-app-pub-8692315641498587~6802184712</string>
+    <string name="ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="int_ad_id">ca-app-pub-3940256099942544/1033173712</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Sarkari Jobs 4U</string>
-    <string name="nav_header_subtitle">Grab the opportunity of Govt. Jobs</string>
+    <string name="nav_header_title">Sarkari Naukri</string>
+    <string name="nav_header_subtitle">Get Ready for the Sarkari Naukri</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_about">About</string>
-    <string name="action_more">More Apps</string>
+    <string name="more_apps">More Apps</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_latest">Latest Jobs</string>
-    <string name="menu_answers">Answers Keys</string>
-    <string name="menu_admit">Admit Cards</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_aptitude">Aptitude Test</string>
-    <string name="menu_gk">Current Affair</string>
-    <string name="menu_quiz">Daily Quiz</string>
-    <string name="menu_reasoning">Reasoning</string>
-    <string name="menu_about">About</string>
-    <string name="details">Sarkari jobs 4U app design for all, those are willing to search jobs in Government sector
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="latest_jobs">All Govt. Exams</string>
+    <string name="answers_key">Check Answers Keys</string>
+    <string name="result_title">Check Results</string>
+    <string name="admit_card">Admit Cards</string>
+    <string name="admit_card_title">Check Admit Cards</string>
+    <string name="share">Share</string>
+    <string name="aptitude_test">Aptitude Test</string>
+    <string name="current_gk">Current Affair</string>
+    <string name="quiz">Daily Quiz</string>
+    <string name="reasoning">Reasoning</string>
+    <string name="about">About</string>
+    <string name="more_detail">View More</string>
+
+    <string name="rate_us_play">Rate us on Play Store</string>
+
+
+    <string name="details">Sarkari Naukri app design for all, those are willing to search jobs in Government sector
         .This app shows the all latest openings and also provide some features like Current affairs and practice test for govt jobs.
         This app also shows the all admit cards nad the latest result of the government exams.
         It also shows the answers keys of related exams.
     </string>
 
     <string name="datafrom">All the data and information is fetched from sarkariresult.com website. This website provide
-        the genuine information related to all govt exams. All the data are fetch from this website and display it on this application.
-        Also the quiz and the other information are fetched from the indiaBix.com website which is one of the good website
+        the genuine information related to all govt exams.Data source of quiz is indiaBix.com website which is one of the good website
         for preparation of govt jobs.
     </string>
+
+    <string name="version">Sarkari Naukri v1.0</string>
+    <string name="no_data">No Data</string>
+    <string name="top_trending">Top Trending Jobs</string>
+    <string name="welcome_msg">Welcome to Sarkari Naukri</string>
+    <string name="loading_text">please wait....</string>
+
+    <string name="exit_confirm_msg">Are you sure to exit ?</string>
+    <string name="exit_msg">If this app is helpful for you , please share and rate us on play store.</string>
+    <string name="app_version">Version 1.0</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <string name="exit">Exit</string>
+    <string name="rate_us">Rate Us</string>
 
 </resources>
